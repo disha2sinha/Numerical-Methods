@@ -14,7 +14,40 @@ void main()
 	int i,j,n;
 	printf("\n HOW MANY NUMBERS?\n");
 	scanf("%d",&n);
-	
-	
-	
+	for(i=0;i<n;i++)
+	{
+		printf("\nENTER x VALUES:\n");
+		scanf("%f",&a[i][0]);
+		printf("\nENTER y VALUES:");
+		scanf("%f",&a[i][1]);
+	}
+	printf("\nENTER NUMBER:\n");
+	scanf("%f",&x);
+	h=a[1][0]-a[0][0];
+	u=(x-a[0][0])/h;
+	for(i=1;i<n;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			a[j][i+1]=a[j+1][i]-a[j][i];
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("\n");
+		for(j=0;j<n;j++)
+		{
+			if((i+j-1)<n)
+			{
+				printf("%f\t",a[i][j]);
+			}
+		}
+	}
+	sum=a[0][1];
+	for(i=1;i<n;i++)
+	{
+		temp*=(u-i+1);
+		sum+=temp/fact(i)*a[0][i+1];
+	}
+	printf("\nf(%f)=%f",x,sum);
 }
