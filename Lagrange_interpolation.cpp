@@ -21,7 +21,6 @@ int main()
 			if(i==j)
 			{
 				continue;
-				temp*=(x1-x[j])/(x[i]-x[j]);
 			}
 		}
 		sum+=temp*y[i];
