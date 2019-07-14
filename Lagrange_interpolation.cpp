@@ -22,6 +22,7 @@ int main()
 			{
 				continue;
 			}
+			temp*=(x1-x[j])/(x[i]-x[j]);
 		}
 		sum+=temp*y[i];
 		printf("t=%f,s=%f\n",temp,sum);
