@@ -1,0 +1,26 @@
+#include<stdio.h>
+float f(float x)
+{
+	return 1/(1+x*x);
+}
+
+void main()
+{
+	float a,b,sum=0,h;
+	int i,n;
+	printf("\nENTER LOWER LIMIT:\n");
+	scanf("%f",&a);
+	printf("\nENTER UPPER LIMIT:\n");
+	scanf("%f",&b);
+	printf("\nENTER NO. OF INTERVALS:\n");
+	scanf("%d",&n);
+	h=(b-a)/n;
+	printf("\n\nLOWER LIMIT(a):%f\nUPPER LIMIT(b):%f\nNO. OF INTERVALS(n):%d\nSTEP SIZE(h):%f\n\n",a,b,n,h);
+	for(i=0;i<=n;i++)
+	{
+		sum+=2*f(a+i*h);
+		printf("\nSTEP=%d\t\ta=%f\t\tsum=%f\t\tf(a)=%f\n",i,a+i*h,sum,f(a+i*h));
+	}
+	sum=h/2*(sum-f(a)-f(b));
+	printf("\nRESULT:%f",sum);
+}
