@@ -2,11 +2,11 @@
 #define abs(a) (a>0?a:-a)
 float f(float x)
 {
-	return (x*x*x-x*x+2);
+	return (x*x*x-4*x+2);
 }
 float f1(float x)
 {
-	return (3*x*x-2*x);
+	return (3*x*x-4);
 }
 void main()
 {
