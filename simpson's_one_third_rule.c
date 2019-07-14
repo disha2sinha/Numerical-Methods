@@ -2,7 +2,7 @@
 #include<math.h>
 float f(float x)
 {
-	return log(x);
+	return (x*x*x);
 }
 
 void main()
